@@ -1,0 +1,7 @@
+{
+  "name": "kdmulti",
+  "short_name": "kdmulti",
+  "description": "#",
+  "start_url": "/",
+  "display": "standalone"
+}

@@ -1,0 +1,53 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/multiselect-combo-box/multiselect-combo-box.html">
+
+<dom-module id="kdmulti-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+
+
+    <multiselect-combo-box label="Select items" items=[[prop2]] item-id-path="name" item-value-path="name" item-label-path="name" ></multiselect-combo-box>
+
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class KdmultiApp extends Polymer.Element {
+      static get is() { return 'kdmulti-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'kdmulti-app'
+          }, 
+          prop2: {
+            type: Array,
+            value: [{
+                id: 1,
+                name: "keith"
+              }, 
+              {
+                id: 2,
+                name: "edward"
+              }, 
+              {
+                id: 3,
+                name: "digby"
+              }
+            ]
+          }
+        };
+      }
+    }
+
+    window.customElements.define(KdmultiApp.is, KdmultiApp);
+  </script>
+</dom-module>
